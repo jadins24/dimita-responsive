@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dimita</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,21 +18,23 @@
 <body>
 
 	<header>
-		<div class="nav-bar">
-			<div class="logo">
-				<h1>Dimita</h1>
+		<div class="nav-bar">	
+		<nav>
+			<div>
+				<h1>DIMITA</h1>
 			</div>
-			
-			<div class="nav-list">
-				<a href="">HOME</a>
-				<a href="">SHOP</a>
-				<a href="">BLOG</a>
-				<a href="">CONTACT</a>
-				<a href="">VENDORS</a>
-				<a href="">COMPARE</a>
-		
+			<div class="menu-bar">
+				<i class="fa fa-bars" onclick="navbar()"></i>
 			</div>
-			
+			<div class="nav-link" onclick="fun()">
+				<a href="#" >HOME</a>
+				<a href="#shop">SHOP</a>
+				<a href="#blog">BLOG</a>
+				<a href="#footer">CONTACT</a>
+				<a href="#">VENDORS</a>
+				
+				<a href="#">COMPARE</a>
+			</div>
 			<div class="nav-icon">
 				<i class="material-symbols-outlined">search</i>
 				<i class="material-symbols-outlined">person_filled</i>
@@ -41,8 +43,10 @@
 				
 			
 			</div>
-
-		</div>
+		</nav>
+	</div>
+		
+		
 	</header>
 	
 	
@@ -63,7 +67,7 @@
 		
 		</div>
 	</section>
-	<section class="shop">
+	<section class="shop" id="shop">
 		<div class="shop-container">
 			<div class="shop-head">
 				<h1> SHOP BY CATEGORY</h1>
@@ -362,11 +366,12 @@
 	
 	</section>
 	
-	<section class="blog">
+	<section class="blog mt-4"id="blog">
 		<div class="blog-container">
 			<div class="blog-head">
 				<h1>FROM THE BLOG </h1>
 				<img src="img/banner5.png.webp" alt="img not found">
+				
 				
 				<div class="icon">
 					<img src="img/icon.jpg" alt="img not found">
@@ -407,7 +412,7 @@
 	</section>
 	
 	
-	<section class="footer">
+	<section class="footer" id="footer">
 		<div class="footer-join">
 			<img src="img/banner6.png.webp" alt="img not found">
 	
@@ -451,9 +456,29 @@
 		</div>
 		
 		
+		
 	</section>
+	<script>
 
-
+	var i=1;
+	function navbar(){
+		i++;
+		if(i%2==0){
+			document.querySelector('.nav-link').style='display:flex;width: 50%;flex-direction: column;position: absolute;background: white;right: 0;top: 33px;'
+		
+		}
+		if(i%2!=0){
+			document.querySelector('.nav-link').style='display:none'
+		}
+		console.log('hi')
+	}
+	function fun(){
+		if(document.querySelector('.nav-link').style.display=='flex'){
+			document.querySelector('.nav-link').style='display:none'
+			i=1
+		}
+	}
+	</script>
 
 
 
